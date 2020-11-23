@@ -1,0 +1,96 @@
+@import 'global';
+@import 'utilities';
+@import 'dev';
+@import 'fonts';
+
+
+.btn {
+  @include menu();
+  padding: 0.5rem 1.75rem;
+  background: transparent;
+  color: #fff;
+  border: 0;
+  box-sizing: border-box;
+  line-height: 1.1;
+  cursor: pointer;
+
+  &.btn-border{
+    border: 1px solid #fff;
+  }
+
+  &.btn-dark {
+    background: #1c1c1c;
+    line-height: 0.2;
+    padding: 1rem 1.625rem;
+  }
+
+  &:hover, &:focus {
+    background: white;
+    color: #1c1c1c;
+
+    &::after {
+      display: none;
+    }
+
+    svg > path{
+
+      stroke: #1c1c1c;
+    }
+  }
+}
+
+.header {
+
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+  display: grid;
+  grid-template-areas: 'logo nav buy tel';
+  width: 95%;
+  margin: auto;
+
+  &__logo {
+    grid-area: logo;
+  }
+
+  &__navigation {
+    grid-area: nav;
+    @include menu();
+    display: flex;
+    gap: 1.25rem;
+    justify-self: center;
+  }
+
+  &__buy {
+    grid-area: buy;
+  }
+
+  &__tel {
+    grid-area: tel;
+  }
+
+  &__hamburger {
+    grid-area: hamburger;
+  }
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 1200px){
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: inherit;
+  }
+
+  .header {
+    grid-template-areas:
+    'logo buy hamburger'
+    'nav nav nav'
+    'tel tel tel';
+  }
+}

@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+@mixin apple-font {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+@mixin ubuntu-font {
+  font-family: Ubuntu, sans-serif;
+}
+
+body {
+  color: white;
+  @include ubuntu-font();
+}
+
+h1, h2 {
+  @include apple-font();
+}
+
+h1 {
+  font-size: 6rem;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 2.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.btn-big {
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 3%;
+}
+
+.btn-small {
+  font-weight: bold;
+  font-size: 0.875rem;
+  letter-spacing: 3%;
+}
+
+@mixin menu {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+}
+
+.text-regular {
+  font-weight: lighter;
+  line-height: 1.5;
+  font-size: 1.07rem;
+}
+
+.text-small {
+  font-weight: lighter;
+  line-height: 1.3;
+  font-size: 0.93rem;
+}
+
+.placeholder {
+  font-size: 0.85rem;
+  line-height: 1.3;
+}
+
+.text-logo {
+  letter-spacing: 1px;
+  font-size: 1.125rem;
+}
+
+@media (max-width : 600px) {
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    @include ubuntu-font();
+  }
+
+  h3 {
+    font-size: 1.125rem;
+  }
+}
