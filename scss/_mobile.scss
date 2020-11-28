@@ -1,64 +1,10 @@
-.mobile-only {
-  display: none;
-}
-
-@media (max-width: 1200px){
-  .desktop-only {
+@media (max-width: 600px){
+  .desktop-only, .desktop-tablet {
     display: none;
   }
 
   .mobile-only {
     display: inherit;
-  }
-
-  .header {
-    grid-template-areas:
-    'logo buy hamburger'
-    'nav nav nav'
-    'tel tel tel';
-    padding: 1.5rem 0.75rem;
-
-    &__navigation {
-      display: none;
-    }
-
-    &__tel {
-      display: none;
-    }
-
-    &.header--mobile--open {
-
-      top: 0;
-      bottom: 0;
-      overflow: auto;
-      background: rgba(#1c1c1c, 0.8);
-      
-      .header__navigation, .header__tel {
-        display: inherit
-      }
-
-      .header__navigation {
-        padding: 5rem 1rem 1rem 1rem;
-        justify-self: start;
-        width: 100%;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.24);
-
-        * {
-          margin: 1.1rem 0;
-        }
-      }
-
-      .header__tel {
-        align-self: start;
-        margin: 2.2rem 1rem;
-      }
-
-      &::after {
-        content: '';
-        height: 1px;
-      }
-
-    }
   }
 
   .main-page {

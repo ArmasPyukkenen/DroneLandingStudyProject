@@ -1,0 +1,91 @@
+@media (max-width: 1200px){
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-tablet {
+    display: inherit;
+  }
+
+  .header {
+    grid-template-areas:
+    'logo buy hamburger'
+    'nav nav nav'
+    'tel tel tel';
+    padding: 1.5rem 0.75rem;
+
+    &__navigation {
+      display: none;
+    }
+
+    &__tel {
+      display: none;
+    }
+
+    &.header--mobile--open {
+
+      top: 0;
+      bottom: 0;
+      overflow: auto;
+      background: rgba(#1c1c1c, 0.8);
+      
+      .header__navigation, .header__tel {
+        display: inherit
+      }
+
+      .header__navigation {
+        padding: 5rem 1rem 1rem 1rem;
+        justify-self: start;
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+
+        * {
+          margin: 1.1rem 0;
+        }
+      }
+
+      .header__tel {
+        align-self: start;
+        margin: 2.2rem 1rem;
+      }
+
+      &::after {
+        content: '';
+        height: 1px;
+      }
+
+    }
+  }
+
+  section {
+    padding: 120px 5vw 3rem;
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .about-page {
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+
+    &__text {
+      flex-basis: auto;
+      margin-bottom: 2rem;
+      max-width: 800px;
+    }
+
+    &__slider {
+      align-self: flex-start;
+      justify-self: center;
+      padding-left: 2rem;
+    }
+  }
+
+  .slider {
+    &__viewport::before {
+      display: none;
+    }
+  }
+}
