@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
 
 @mixin apple-font {
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -53,7 +53,7 @@ h4 {
 }
 
 .text-regular {
-  font-weight: lighter;
+  font-weight: 300;
   line-height: 1.5;
   font-size: 1.07rem;
 }

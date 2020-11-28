@@ -1,0 +1,113 @@
+.btn {
+  @include menu();
+  padding: 0.5rem 1.75rem;
+  background: transparent;
+  color: #fff;
+  border: 0;
+  box-sizing: border-box;
+  line-height: 1.1;
+  cursor: pointer;
+  width: fit-content;
+
+  &.btn-border{
+    border: 1px solid #fff;
+  }
+
+  &.btn-icon {
+    line-height: 0.2;
+    padding: 1rem 1.625rem;
+  }
+
+  &:hover, &.btn-white{
+    background: white;
+    color: #1c1c1c;
+
+    svg {
+      stroke: #1c1c1c;
+    }
+  }
+
+  &.btn-dark, &.btn-white:hover {
+    background: #1c1c1c;
+    color: white;
+
+    svg {
+      stroke: white;
+    }
+  }
+
+  &__social-link {
+    color: #00000080;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    opacity: 0.5;
+    border-radius: 50%;
+  
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+}
+
+.menu-btn {
+
+  --openicondisplay: inherit;
+  --closeicondisplay: inherit;
+
+  &--open {
+    --openicondisplay: inherit;
+    --closeicondisplay: none;
+  }
+
+  &--close {
+    --openicondisplay: none;
+    --closeicondisplay: inherit;
+  }
+
+  &__open-icon {
+    display: var(--openicondisplay);
+  }
+
+  &__close-icon {
+    display: var(--closeicondisplay);
+  }
+}
+
+.flex {
+  display: flex;
+
+  &.flex--jsa {
+    justify-content: space-around;
+  }
+}
+
+.container--20rem {
+  width: 80%;
+  max-width: 20rem;
+}
+
+.scroll-btn {
+  position: fixed;
+  bottom: 0.5rem;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transform: translateX(-50%)
+  rotate(90deg);
+
+  &:hover {
+    opacity: 0.3;
+  }
+}

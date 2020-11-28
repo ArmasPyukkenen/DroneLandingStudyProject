@@ -9,41 +9,69 @@
   <title>Mavic Drones</title>
 </head>
 <body>
-  <div class="dev-container">
-    <button class="btn btn-dark">
-      <svg width="10" height="16" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1 17L9 9L1 1" stroke="white"/>
-      </svg>
+  <header class="header">
+    <a href="#main" class="header__logo">
+      <img src="img/logo.png" alt="logo">
+      <span class="text-logo desktop-only">MAVIC 2 PRO</span>
+    </a>
+    <nav class="header__navigation">
+      <a href="#about" class="header__option">О Дроне</a>
+      <a href="#advantages" class="header__option">Преимущества</a>
+      <a href="#characteristics" class="header__option">Характеристики</a>
+      <a href="#questions" class="header__option">Вопросы</a>
+      <a href="#contacts" class="header__option">Контакты</a>
+    </nav>
+    <button class="btn btn-border header__buy">Купить</button>
+    <a class="header__tel" href="tel:8050-567-67-67">8 (050) 567 67 67</a>
+    <button class="btn mobile-only header__hamburger menu-btn menu-btn--open">
+      <i class="fas fa-bars menu-btn__open-icon"></i>
+      <i class="fas fa-times menu-btn__close-icon"></i>
     </button>
-    <button class="btn btn-border">Купить</button>
-    <header class="header">
-      <a href="#about" class="header__logo">
-        <img src="img/logo.png" alt="logo">
-        <span class="text-logo desktop-only">MAVIC 2 PRO</span>
-      </a>
-      <nav class="header__navigation">
-        <a href="#about" class="header__option">О Дроне</a>
-        <a href="#advantages" class="header__option">Преимущества</a>
-        <a href="#characteristics" class="header__option">Характеристики</a>
-        <a href="#questions" class="header__option">Вопросы</a>
-        <a href="#contacts" class="header__option">Контакты</a>
-      </nav>
-      <button class="btn btn-border header__buy">Купить</button>
-      <a class="header__tel" href="tel:8050-567-67-67">8 (050) 567 67 67</a>
-      <button class="btn mobile-only header__hamburger">
-        <i class="fas fa-bars"></i>
-      </button>
-    </header>
-    <h1>Mavic 2 Pro</h1>
-    <h2>About</h2>
-    <h3>About</h3>
-    <h4>Details</h4>
-    <div class="btn btn-big">Buy now</div>
-    <div class="btn btn-small">Buy now</div>
-    <div class="menu">Company</div>
-    <div class="text-regular">This is regular text! Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus saepe neque corporis quaerat consequuntur commodi, magni eum ducimus incidunt sit, aperiam ipsa iure. Est, blanditiis?</div>
-    <div class="text-small">This is small text! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat distinctio suscipit animi omnis dolorem magnam facilis adipisci et exercitationem itaque.</div>
-    <div class="placeholder">Type in your stuff</div>
-  </div>
+  </header>
+  <section class="main-page" id="main">
+    <h1 class="desktop-only">Mavic 2 Pro</h1>
+    <img class="main-page__img" src="./img/drone.png" alt="drone">
+    <p class="text-regular container--20rem">Квадрокоптер Dji Mavic 2 Pro с профессиональной камерой Hasselblad</p>
+    <div class="flex flex--jsa container--20rem">
+      <a href="" class="btn btn__social-link"><i class="fab fa-facebook-f"></i></a>
+      <a href="" class="btn btn__social-link"><i class="fab fa-youtube"></i></a>
+      <a href="" class="btn btn__social-link"><i class="fab fa-instagram"></i></a>
+    </div>
+  </section>
+  <section class="about-page" id="about">
+    <div class="about-page__text">
+      <h2>Что такое Mavic 2 Pro?</h2>
+      <p class="text-regular">
+        Дрон Mavic 2 Pro - это инженерное чудо, идеальное для аэросъемки. Дрон обладает всеми лучшими технологиями DJI, он преобразит мир аэросъемки.
+      </p>
+      <p class="text-regular">
+        Mavic 2 Pro оснащен совершенно новой камерой Hasselblad L1D-20c. Камера L1D-20c работает по уникальной технологии Hasselblad Natural Colour Solution (HNCS)5, позволяющей пользователям делать великолепные снимки с воздуха с разрешением в 20 мегапикселей и потрясающими цветами.
+      </p>
+    </div>
+    <div class="slider about-page__slider">
+      <h3 class="desktop-only">Лучшая беспилотная технология аэросъемки</h3>
+      <div class="slider__viewport">
+        <img class="slider__img" src="./img/drone2.png" alt="slider viewport">
+      </div>
+      <div class="slider__buttons">
+        <button class="btn btn-white btn-icon slider__prev" type="button" onclick="console.log('click')">
+          <svg width="10" height="18" viewBox="0 0 10 18" fill="none" stroke="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 17L9 9L1 1"/>
+          </svg>
+        </button>
+        <button class="btn btn-white btn-icon slider__next" type="button">
+          <svg width="10" height="18" viewBox="0 0 10 18" fill="none" stroke="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 17L9 9L1 1"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+  <button class="btn scroll-btn" tabindex="0" type="button" title="scroll">
+    <svg width="10" height="18" viewBox="0 0 10 18" fill="none" stroke="white" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1 17L9 9L1 1"/>
+    </svg>
+  </button>
+  <script src="script.js"></script>
 </body>
 </html>
