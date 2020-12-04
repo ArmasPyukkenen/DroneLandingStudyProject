@@ -9,6 +9,7 @@ body {
 a {
   display: inline-block;
   width: fit-content;
+  width: -moz-fit-content;
   text-decoration: none;
   color: inherit;
   border: 1px solid transparent;

@@ -107,6 +107,11 @@
   transform: translateX(-50%)
   rotate(90deg);
 
+  svg {
+    stroke: white;
+    height: 1rem;
+  }
+
   &:hover {
     opacity: 0.3;
   }

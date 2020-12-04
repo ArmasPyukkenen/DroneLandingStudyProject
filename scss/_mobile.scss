@@ -17,4 +17,23 @@
         margin-bottom: 20vh;
       }
   }
+
+  .about-page {
+    &__container {
+      flex-direction: column;
+      justify-content: start;
+    }
+
+    &__text {
+      flex-basis: auto;
+    }
+  }
+
+  .advantage {
+    flex-direction: column-reverse;
+
+    &__text {
+      padding: 0;
+    }
+  }
 }
